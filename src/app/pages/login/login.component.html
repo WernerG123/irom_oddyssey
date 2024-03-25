@@ -1,0 +1,13 @@
+<div class="container">
+    <mat-form-field appearance="outline">
+        <mat-label>email</mat-label>
+        <input matInput [(ngModel)]="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>password</mat-label>
+        <input matInput [(ngModel)]="password" style="color:white">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
+</div>

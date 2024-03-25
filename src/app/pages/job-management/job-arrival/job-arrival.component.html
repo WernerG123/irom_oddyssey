@@ -1,0 +1,74 @@
+<mat-card style="border: 1px solid black;">
+    <mat-grid-list cols="3" rowHeight="3:2" *ngIf="jobReady">
+
+        <mat-grid-tile>
+                    <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Barcode/Tracking Device</mat-label>
+                            <mat-select>
+                                <mat-option>YES</mat-option>
+                                <mat-option>NO</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Project Number</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Customer</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Sales Order Number</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Customer PO Number</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                   
+            
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Workshop Allocation</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Customer Material No</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Asset Type</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Drawing Ref From Nameplate</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Arrival Date</mat-label>
+                    <input matInput type="date">
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; max-height: 100%; overflow: auto;">
+                <div style="display: flex; flex-direction: column; height: fit-content">
+                    <div style="display:flex; flex-direction: row;">
+                        <mat-icon>qr_code_scanner</mat-icon>
+                        <div style="border: 1px solid black; padding: 4px; background-color: red">ASSET AT VENDOR</div>
+                    </div>
+                </div>
+
+                <div style="border: 4px dashed gray; background-color: white; width: 14em; height: 14em"></div>
+
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+</mat-card>

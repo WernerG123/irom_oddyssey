@@ -1,0 +1,42 @@
+::ng-deep input.mat-input-element {
+    color: black !important;
+}
+
+.customerPOContainer {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+    height: 80%;
+}
+
+.drawingContainer {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+    height: 80%;
+}
+
+.arrivalPhotoContainer {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 95%;
+    height: 95%;
+    margin: 4px;
+}
+
+.deleteCard {
+    z-index: 3000;
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    border: 1px solid black;
+}
+
+::ng-deep.mat-grid-tile-content {
+    align-items: start !important;
+}

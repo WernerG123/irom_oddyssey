@@ -1,0 +1,26 @@
+
+<mat-tab-group class="tabGroupTop">
+    <mat-tab label="Job Arrival">
+        <!-- <button mat-raised-button color="accent">Add New</button> -->
+        <app-job-entry [jobItem]="selectedJobObj" *ngIf="jobLoaded"></app-job-entry>
+    </mat-tab>
+    <mat-tab label="Critical Asset Details">
+        <!-- <app-job-arrival></app-job-arrival> -->
+        <app-critical-asset [criticalAsset]="selectedJobObj" *ngIf="jobLoaded"></app-critical-asset>
+    </mat-tab>
+    <mat-tab label="Scope of Work">
+        <app-scope-of-work [scopeOfWork]="selectedJobObj" *ngIf="jobLoaded"></app-scope-of-work>
+    </mat-tab>
+    <!-- <mat-tab label="Strip And Quote">
+
+    </mat-tab>
+    <mat-tab label="Job Award and Delivery">
+
+    </mat-tab>
+    <mat-tab label="Invoice">
+
+    </mat-tab>
+    <mat-tab label="Quality">
+
+    </mat-tab> -->
+</mat-tab-group>

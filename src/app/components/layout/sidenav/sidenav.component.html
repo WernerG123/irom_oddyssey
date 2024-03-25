@@ -1,0 +1,63 @@
+<!-- <mat-sidenav-container>
+    <mat-sidenav #drawer class="menuOverlay" mode="over">
+        <mat-nav-list>
+            <span class="full-width" *ngIf="isExpanded || isShowing">Parent Menu</span>
+            <a mat-list-item class="navItem" (click)="drawer.toggle();" [routerLink]="['home']"><mat-icon>home</mat-icon>Home</a>
+            <a mat-list-item class="navItem" (click)="drawer.toggle();" [routerLink]="['home']"><mat-icon>checklist</mat-icon>Job Management</a>
+            <a mat-list-item class="navItem" (click)="drawer.toggle();" [routerLink]="['home']"><mat-icon>alarm</mat-icon>Notifications</a>
+            <a mat-list-item class="navItem" (click)="drawer.toggle();" [routerLink]="['home']"><mat-icon>list</mat-icon>Job Board</a>
+            <a mat-list-item class="navItem" (click)="drawer.toggle();" [routerLink]="['home']"><mat-icon>email</mat-icon>Email</a>
+            <a mat-list-item class="navItem" (click)="drawer.toggle();" [routerLink]="['login']"><mat-icon>logout</mat-icon>Logout</a>
+        </mat-nav-list>
+        
+    </mat-sidenav>
+    <mat-sidenav-content style="height: 100vh; max-height: 100vh; overflow: auto;">
+        <mat-toolbar >
+            <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<mat-toolbar  class="example-toolbar">
+	<!-- <button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button> -->
+	<button mat-icon-button><mat-icon>menu</mat-icon></button>
+	<h1 class="example-app-name">IROM Oddyssey</h1>
+</mat-toolbar>
+<mat-sidenav-container class="example-container" autosize>
+	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+		<mat-nav-list>
+			<mat-list-item (click)="navToHome()" class="parent">
+				<span class="full-width" *ngIf="isExpanded || isShowing">Home</span>
+				<mat-icon mat-list-icon>home</mat-icon>
+			</mat-list-item>
+            <mat-list-item (click)="navToJobManagement()" class="parent">
+				<span class="full-width" *ngIf="isExpanded || isShowing">Job Management</span>
+				<mat-icon mat-list-icon>checklist</mat-icon>
+			</mat-list-item>
+            <mat-list-item (click)="navToNotifications()" class="parent">
+				<span class="full-width" *ngIf="isExpanded || isShowing">Notifications</span>
+				<mat-icon mat-list-icon>alarm</mat-icon>
+			</mat-list-item>
+            <mat-list-item (click)="navToJobBoard()" class="parent">
+				<span class="full-width" *ngIf="isExpanded || isShowing">Job Board</span>
+				<mat-icon mat-list-icon>list</mat-icon>
+			</mat-list-item>
+            <mat-list-item (click)="navToEmail()" class="parent">
+				<span class="full-width" *ngIf="isExpanded || isShowing">Email</span>
+				<mat-icon mat-list-icon>email</mat-icon>
+			</mat-list-item>
+            <mat-list-item (click)="navToLogin()" class="parent">
+				<span class="full-width" *ngIf="isExpanded || isShowing">Logout</span>
+				<mat-icon mat-list-icon>logout</mat-icon>
+			</mat-list-item>
+		</mat-nav-list>
+    <mat-nav-list>
+</mat-nav-list>
+	</mat-sidenav>
+
+	<div class="example-sidenav-content">
+		<router-outlet></router-outlet>
+	</div>
+
+</mat-sidenav-container>

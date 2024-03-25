@@ -1,0 +1,194 @@
+<mat-card style="border: 1px solid black;">
+    <mat-grid-list cols="6" rowHeight="2:3">
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Asset Uni</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.pulleyArrival!.assetUni">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Customer</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.customerJobInfo!.customer">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Customer PO Number</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.customerJobInfo!.customerPO">
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Material #</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.customerJobInfo!.customerMaterialNo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Pulley Type</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.pulleyArrival!.assetType">
+                </mat-form-field>
+
+            </div>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Drawing Ref Customer</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.drawingRefCustomer">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Drawing OEM</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.drawingOEM">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Housing Manufacturer</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.housingManufacturer">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Housing Type</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.housingsType">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Bearing Designation</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.bearingDesignation">
+                </mat-form-field>
+
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Bearing Open/Sealed</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.bearingOpenSealed">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Bearing Manufacturer</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.bearingManufacturer">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Bearing Load Applied at VA</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.bearingLoadAppliedAtVA">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>VA Running Test Speed</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.vaRunningTestSpeed">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Grease Type and Make</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.greaseType">
+                </mat-form-field>
+
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Site</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.customerJobInfo!.customerSite">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Arrival Date</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.pulleyArrival!.arrivalDate">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Serial No</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.pulleyArrival!.serialNo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>OEM Job No</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.oemJobNo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Seal Type</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.sealType">
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Locking Assemblies</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.lockingAssemblies">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Locking Assemblies Nm</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.lockingAssembliesNm">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Lagging</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.lagging">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Shell Thickness</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.shellThickness">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Pulley DIA</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.pulleyDIA">
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Pulley Face Width</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.pulleyFaceWidth">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Shaft O/L</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.shaftOL">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Bearing Shaft DIA</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.bearingShaftDIA">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Housing Centers</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.housingCenters">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Mass (kg)</mat-label>
+                    <input matInput [(ngModel)]="criticalAsset.criticalAsset!.mass">
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" style="margin: 8px;" (click)="save()"><mat-icon>check</mat-icon> Submit</button>
+    <button mat-raised-button color="accent" style="margin: 8px;" (click)="close()"><mat-icon>cancel</mat-icon> Close</button>
+    <button mat-raised-button color="warn" style="position: absolute; bottom: 8px; right: 8px;" *ngIf="criticalAsset._id != undefined && criticalAsset._id != ''"><mat-icon>delete</mat-icon> Delete</button>
+</mat-card>

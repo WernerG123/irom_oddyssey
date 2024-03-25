@@ -1,0 +1,81 @@
+.menuOverlay {
+    height: 100vh; 
+    width: 10vw;
+    background-color: rgba(110,110,110, 1)
+}
+
+mat-sidenav-content {
+    height: 100vh;
+}
+
+mat-toolbar {
+    height: 6vh;
+    background-color: white;
+    border-bottom: 1px solid gray;
+}
+
+.navItem {
+ background-color: #6e6e6e !important;
+ 
+//  opacity: 0;
+//  transition: 1s;
+
+}
+
+.navItem:hover {    
+    
+    background-color: #ffffff !important;
+    // animation: hoverEffect 560ms linear;
+    // opacity: 1;
+    color: black;
+    transition: 1s;
+    
+}
+
+
+.example-container {
+    height: 94vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    width: 85vw;
+    max-width: 92vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .example-sidenav {
+     user-select: none;
+     background-color: #ffcd00;
+  }
+  .full-width {
+    width: 100%;
+    // transition: 1s;
+  }
+  .menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+  }
+  .menu-button.rotated {
+    transform: rotate(180deg);
+  }
+  .submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+  }
+  .submenu.expanded {
+    transform: scaleY(1);
+  }
+
+@keyframes hoverEffect {
+    0% {
+        background-color: white;
+    }
+     100% {
+        background-color: white;
+     }
+}

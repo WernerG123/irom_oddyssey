@@ -1,0 +1,21 @@
+.tabGroupTop {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+input matInput {
+    color: black !important ;
+}
+
+::ng-deep .mat-form-field {
+    color: black !important;
+}
+
+::ng-deep input.mat-input-element {
+    color: black !important;
+}

@@ -1,0 +1,245 @@
+<mat-card style="border: 1px solid black;">
+    <mat-stepper>
+        <mat-step>
+            <ng-template matStepLabel>Customer And Job Information</ng-template>
+            <mat-grid-list cols="5" rowHeight="2:3">
+                <mat-grid-tile >
+                    <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Project Number</mat-label>
+                            <input matInput [(ngModel)]="jobItem. customerJobInfo!.projectNo" >
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Customer</mat-label>
+                            <input matInput [(ngModel)]="jobItem.customerJobInfo!.customer">
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Sales Order Number</mat-label>
+                            <input matInput [(ngModel)]="jobItem.customerJobInfo!.salesOrderNo">
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Customer PO Number</mat-label>
+                            <input matInput [(ngModel)]="jobItem.customerJobInfo!.customerPO">
+                        </mat-form-field>
+        
+                    </div>
+        
+                </mat-grid-tile>
+        
+        
+                <mat-grid-tile>
+                    <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Customer Material Number</mat-label>
+                            <input matInput [(ngModel)]="jobItem.customerJobInfo!.customerMaterialNo" >
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Serial Number</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.serialNo">
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Part Description</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.assetType">
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Arrival Date</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.arrivalDate" type="datetime" placeholder="dd/mm/yyyy">
+                        </mat-form-field>
+        
+                    </div>
+                </mat-grid-tile>
+        
+                <mat-grid-tile>
+                    <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Customer Site</mat-label>
+                            <input matInput [(ngModel)]="jobItem.customerJobInfo!.customerSite">
+                        </mat-form-field>
+<!--         
+                        <mat-form-field appearance="outline">
+                            <mat-label>Customer Delivery Address</mat-label>
+                            <input matInput [(ngModel)]="jobItem.customerJobInfo!.customerDeliveryAddress">
+                        </mat-form-field> -->
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Drawing Ref From Nameplate</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.drawingRef">
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Workshop Arrival</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.workshopArrival">
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Barcode/Tracking Device</mat-label>
+                            <mat-select [(ngModel)]="jobItem.pulleyArrival!.barcode_tracking.available">
+                                <mat-option value="YES">YES</mat-option>
+                                <mat-option value="NO">NO</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Barcode/Tracking Comment</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.barcode_tracking.comment">
+                        </mat-form-field>
+        
+                    </div>
+                </mat-grid-tile>
+        
+                <mat-grid-tile>
+                    <div class="customerPOContainer">Add Customer PO Here</div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="drawingContainer">Add Drawing Here</div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Pulley Arrival Condition</ng-template>
+            <mat-grid-list cols="5" rowHeight="2:3">
+                <mat-grid-tile>
+                    <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Shell OD</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.shellOD" >
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Face Width</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.faceWidth">
+                        </mat-form-field>
+        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Lagging</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.lagging">
+                        </mat-form-field>
+     
+                        <mat-form-field appearance="outline">
+                            <mat-label>Bearing Housing Type</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.bearingHousingType">
+                        </mat-form-field>
+     
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Bearing Housing Centers</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.bearingHousingCenters">
+                        </mat-form-field>
+        
+                    </div>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Cover Plate</mat-label>
+                            <mat-select [(ngModel)]="jobItem.pulleyArrival!.coverPlate.available">
+                                <mat-option value="YES">YES</mat-option>
+                                <mat-option value="NO">NO</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Cover Plate Comment</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.coverPlate.comment">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Speed Flags and Brackets</mat-label>
+                            <mat-select [(ngModel)]="jobItem.pulleyArrival!.speedFlagsAndBrackets.available">
+                                <mat-option value="YES">YES</mat-option>
+                                <mat-option value="NO">NO</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Speed Flags and Brackets Comment</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.speedFlagsAndBrackets.comment">
+                        </mat-form-field>
+
+                        
+                    </div>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Coupling</mat-label>
+                            <!-- <mat-select [(ngModel)]="jobItem.coupling.available"> -->
+                                <mat-select [(ngModel)]="jobItem.pulleyArrival!.coupling.available">
+                                <mat-option value="YES">YES</mat-option>
+                                <mat-option value="NO">NO</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Coupling Comment</mat-label>
+                            <!-- <input matInput [(ngModel)]="jobItem.coupling.comment"> -->
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.coupling.comment">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Transport Cradle</mat-label>
+                            <!-- <mat-select [(ngModel)]="jobItem..transportCradle.available"> -->
+                                <mat-select [(ngModel)]="jobItem.pulleyArrival!.transportCradle.available">
+                                <mat-option value="YES">YES</mat-option>
+                                <mat-option value="NO">NO</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Transport Cradle Comment</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.transportCradle.comment">
+                        </mat-form-field>
+                        
+                        <mat-form-field appearance="outline">
+                            <mat-label>General Comments</mat-label>
+                            <input matInput [(ngModel)]="jobItem.pulleyArrival!.generalComments">
+                        </mat-form-field>
+
+                    </div>
+                </mat-grid-tile>
+
+                <mat-grid-tile >
+                    <div style="display: flex; flex-direction: column !important; height: 100%; width: 100%;">
+                        <div class="arrivalPhotoContainer">Photo Placeholder</div>
+                        <div class="arrivalPhotoContainer">Photo Placeholder</div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile style="display: flex; flex-direction: column !important;">
+                    <div style="display: flex; flex-direction: column !important; height: 100%; width: 100%;">
+                        <div class="arrivalPhotoContainer">Photo Placeholder</div>
+                        <div class="arrivalPhotoContainer">Photo Placeholder</div>
+                    </div>
+                </mat-grid-tile>
+
+            </mat-grid-list>
+        </mat-step>
+    </mat-stepper>
+
+    <button mat-raised-button color="primary" style="margin: 8px;" (click)="saveJobEntry()"><mat-icon>check</mat-icon> Submit</button>
+    <button mat-raised-button color="accent" style="margin: 8px;" (click)="close()"><mat-icon>cancel</mat-icon> Close</button>
+    <button mat-raised-button color="warn" style="position: absolute; bottom: 8px; right: 8px;" (click)="isDeleting = true" *ngIf="jobItem._id != undefined && jobItem._id != ''"><mat-icon>delete</mat-icon> Delete</button>
+</mat-card>
+
+<mat-card class="deleteCard" *ngIf="isDeleting">
+    <mat-card-header>
+        <mat-card-title>Confirm Deletion</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <h4>Are you sure you want to delete the Job item?</h4>
+        <div>
+            <label>Project Number: {{jobItem.customerJobInfo.projectNo}}</label>
+            <label>Purchase Order: {{jobItem.customerJobInfo.customerPO}}</label>
+            <label>Customer: {{jobItem.customerJobInfo.customer}}</label>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="deleteJob()"><mat-icon>delete</mat-icon> Delete</button>
+        <button mat-raised-button color="accent" (click)="isDeleting = false"><mat-icon>cancel</mat-icon> Cancel</button>
+    </mat-card-actions>
+</mat-card>

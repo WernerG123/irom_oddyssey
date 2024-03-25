@@ -1,0 +1,587 @@
+<mat-card style="border: 1px solid black;">
+    <mat-stepper>
+        <mat-step>
+            <ng-template matStepLabel>Customer And Job Information</ng-template>
+    <mat-grid-list cols="6" rowHeight="2:3">
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                <mat-form-field appearance="outline">
+                    <mat-label>PROK Job No</mat-label>
+                    <input matInput [(ngModel)]="scopeOfWork.customerJobInfo!.prokJobNo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Customer Site</mat-label>
+                    <input matInput [(ngModel)]="scopeOfWork.customerJobInfo!.customerSite">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Customer PO Number</mat-label>
+                    <input matInput [(ngModel)]="scopeOfWork.customerJobInfo!.customerPO">
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Material No</mat-label>
+                    <input matInput [(ngModel)]="scopeOfWork.customerJobInfo!.customerMaterialNo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Pulley Type</mat-label>
+                    <input matInput [(ngModel)]="scopeOfWork.pulleyArrival!.assetType">
+                </mat-form-field>
+
+            </div>
+
+        </mat-grid-tile>
+    </mat-grid-list>
+    </mat-step>
+
+    <mat-step>
+        <ng-template matStepLabel>Pulley Major Components</ng-template>
+        <table style="width: 100%;">
+            <th>SL.NO</th>
+            <th>Component</th>
+            <th>Comment</th>
+            <th>Action</th>
+            <tr>
+                <td>1</td>
+                <td>Lagging (Thickness and Type)</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Shaft (Major Diameter and overall Length)</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.shaftMajorDiameterAndLength.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.shaftMajorDiameterAndLength.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Shell (Bore Diameter and Depth)</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.shellBoreDiameterAndDepth.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.shellBoreDiameterAndDepth.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Locking Element Size & Type</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.lockingElementSizeAndType.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.lockingElementSizeAndType.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Cover Plate (OD, ID, PCD, Thickness & NO of Holes) </td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.coverPlate.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.coverPlate.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Cover Plate Screws</td>
+                <td>
+                    <mat-form-field style="width: 100%;"> 
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.coverPlateScrews.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.coverPlateScrews.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Speed Flags & Bracket with Screws </td>
+                <td>
+                    <mat-form-field style="width: 100%;"> 
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.speedFlagsAndBrackets.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.speedFlagsAndBrackets.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Housing Assemblies (Open/Closed)/Spacer Ring </td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.housingAssemblies.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.housingAssemblies.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Seals Type (TACONITE (KOBRA) / TACH  / SCORPION / SAPO) </td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.sealsType.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.sealsType.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Grease Type (SHELL GADUS S3, CASTROL PREMIUM OR ANY OTHER TYPE)</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.greaseType.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.greaseType.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Bearing Series (Sealed/Open)</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.bearingSeries.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.bearingSeries.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Bearing Assembly (Adapter Sleeve/Locking Nut/Bearing)</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.bearingAssembly.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.bearingAssembly.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Coupling & Keys</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.couplingAndKeys.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.couplingAndKeys.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>NDT & MPI</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.NDTAndMPI.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMajorComponents.NDTAndMPI.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+        </table>
+    </mat-step>
+
+    <mat-step>
+        <ng-template matStepLabel>Pulley Minor Components</ng-template>
+        <table style="width: 100%;">
+            <th>SL.NO</th>
+            <th>Component</th>
+            <th>Comment</th>
+            <th>Action</th>
+            <tr>
+                <td>1</td>
+                <td>Pulley Nameplate</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyNameplate.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyNameplate.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pulley Cradle Name Board</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyCradleNameBoard.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyCradleNameBoard.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Pulley Cradle</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyCradle.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyCradle.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Name PLate & Fixed End Tags</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.nameplateAndFixedEndTags.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.nameplateAndFixedEndTags.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Cradle Stickers</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.cradleStickers.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.cradleStickers.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Shrink Wraps</td>
+                <td>
+                    <mat-form-field style="width: 100%;"> 
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.shrinkWrap.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.shrinkWrap.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Clear Viewing Windows</td>
+                <td>
+                    <mat-form-field style="width: 100%;"> 
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.clearViewingWindows.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.clearViewingWindows.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Moisture Absorbent</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.moistureAbsorbent.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.moistureAbsorbent.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Cradle Channel </td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.cradleChannel.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.cradleChannel.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Cradle Drawing</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.cradleDrawing.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.cradleDrawing.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Pulley Cradle Nameplate (only RTIO)</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyCradleNameplate.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyCradleNameplate.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Pulley Timber</td>
+                <td>
+                    <mat-form-field style="width: 100%;">
+                        <!-- <mat-label>Comment</mat-label> -->
+                        <input matInput [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyTimber.comment">
+                    </mat-form-field>
+                    <!-- {{scopeOfWork.scopeOfWork.pulleyMajorComponents.lagging.comment}} -->
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <!-- <mat-label>Action</mat-label> -->
+                        <mat-select [(ngModel)]="scopeOfWork.scopeOfWork.pulleyMinorComponents.pulleyTimber.action">
+                            <mat-option value="NEW">NEW</mat-option>
+                            <mat-option value="REPAIR">REPAIR</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+        </table>
+    </mat-step>
+    
+
+    </mat-stepper>
+    <button mat-raised-button color="primary" style="margin: 8px;" (click)="save()"><mat-icon>check</mat-icon> Submit</button>
+    <button mat-raised-button color="accent" style="margin: 8px;" (click)="close()"><mat-icon>cancel</mat-icon> Close</button>
+
+</mat-card>

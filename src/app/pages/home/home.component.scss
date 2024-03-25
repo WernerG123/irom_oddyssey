@@ -1,0 +1,22 @@
+.summaryCard {
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 10vw;
+    height: 10vh;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 92vh;
+    width: 80vw;
+    max-width: 80vw;
+}
