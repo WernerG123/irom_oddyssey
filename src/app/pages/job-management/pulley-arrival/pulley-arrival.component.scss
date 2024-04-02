@@ -40,15 +40,3 @@
 ::ng-deep.mat-grid-tile-content {
     align-items: start !important;
 }
-
-#drop-area {
-    border: 2px dashed #ccc;
-    border-radius: 5px;
-    padding: 25px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  #drop-area.drag-over {
-    border-color: #ff9800;
-  }

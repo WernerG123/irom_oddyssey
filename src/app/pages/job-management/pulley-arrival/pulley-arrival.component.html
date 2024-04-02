@@ -1,0 +1,149 @@
+<mat-card style="border: 1px solid black;">
+    <mat-grid-list cols="5" rowHeight="2:3">
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Shell OD</mat-label>
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.shellOD">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Face Width</mat-label>
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.faceWidth">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Lagging</mat-label>
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.lagging">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Bearing Housing Type</mat-label>
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.bearingHousingType">
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Bearing Housing Centers</mat-label>
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.bearingHousingCenters">
+                </mat-form-field>
+
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Cover Plate</mat-label>
+                    <mat-select [(ngModel)]="jobItem.pulleyArrival!.coverPlate.available">
+                        <mat-option value="YES">YES</mat-option>
+                        <mat-option value="NO">NO</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Cover Plate Comment</mat-label>
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.coverPlate.comment">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Speed Flags and Brackets</mat-label>
+                    <mat-select [(ngModel)]="jobItem.pulleyArrival!.speedFlagsAndBrackets.available">
+                        <mat-option value="YES">YES</mat-option>
+                        <mat-option value="NO">NO</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Speed Flags and Brackets Comment</mat-label>
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.speedFlagsAndBrackets.comment">
+                </mat-form-field>
+
+
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Coupling</mat-label>
+                    <!-- <mat-select [(ngModel)]="jobItem.coupling.available"> -->
+                    <mat-select [(ngModel)]="jobItem.pulleyArrival!.coupling.available">
+                        <mat-option value="YES">YES</mat-option>
+                        <mat-option value="NO">NO</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Coupling Comment</mat-label>
+                    <!-- <input matInput [(ngModel)]="jobItem.coupling.comment"> -->
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.coupling.comment">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Transport Cradle</mat-label>
+                    <!-- <mat-select [(ngModel)]="jobItem..transportCradle.available"> -->
+                    <mat-select [(ngModel)]="jobItem.pulleyArrival!.transportCradle.available">
+                        <mat-option value="YES">YES</mat-option>
+                        <mat-option value="NO">NO</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Transport Cradle Comment</mat-label>
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.transportCradle.comment">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>General Comments</mat-label>
+                    <input matInput [(ngModel)]="jobItem.pulleyArrival!.generalComments">
+                </mat-form-field>
+
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div style="display: flex; flex-direction: column !important; height: 100%; width: 100%;">
+                <div class="arrivalPhotoContainer">
+                    <button mat-mini-fab style="position: absolute; z-index: 10;" (click)="capturing = true; capturingID = 1"><mat-icon>add</mat-icon></button>
+                    <app-custom-camera *ngIf="capturing" (image)="setImage($event, 1); capturing = false;"></app-custom-camera>
+
+                    <div style="width: 100%; height: 100%;">
+                        <img [src]="imageUrl1" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+                <div class="arrivalPhotoContainer">
+                    <button mat-mini-fab style="position: absolute; z-index: 10;" (click)="capturing = true; capturingID = 2"><mat-icon>add</mat-icon></button>
+                    <app-custom-camera *ngIf="capturing" (image)="setImage($event, 2); capturing = false;"></app-custom-camera>
+
+                    <div>
+                        <img [src]="imageUrl2" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile style="display: flex; flex-direction: column !important;">
+            <div style="display: flex; flex-direction: column !important; height: 100%; width: 100%;">
+                <div class="arrivalPhotoContainer">
+                    <button mat-mini-fab style="position: absolute; z-index: 10;" (click)="capturing = true; capturingID = 3"><mat-icon>add</mat-icon></button>
+                    <app-custom-camera *ngIf="capturing" (image)="setImage($event, 3); capturing = false;"></app-custom-camera>
+
+                    <div>
+                        <img [src]="imageUrl3" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+                <div class="arrivalPhotoContainer">
+                    <button mat-mini-fab style="position: absolute; z-index: 10;" (click)="capturing = true; capturingID = 4"><mat-icon>add</mat-icon></button>
+                    <app-custom-camera *ngIf="capturing" (image)="setImage($event, 4); capturing = false;"></app-custom-camera>
+
+                    <div>
+                        <img [src]="imageUrl4" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" style="margin: 8px;" (click)="saveJobEntry()"><mat-icon>check</mat-icon>
+        Submit</button>
+    <button mat-raised-button color="accent" style="margin: 8px;" (click)="close()"><mat-icon>cancel</mat-icon>
+        Close</button>
+</mat-card>

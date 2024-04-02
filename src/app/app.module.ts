@@ -39,6 +39,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatStepperModule} from '@angular/material/stepper';
 import { CriticalAssetComponent } from './pages/job-management/critical-asset/critical-asset.component';
 import { ScopeOfWorkComponent } from './pages/job-management/scope-of-work/scope-of-work.component';
+import { PulleyArrivalComponent } from './pages/job-management/pulley-arrival/pulley-arrival.component';
+import { WebcamModule } from 'ngx-webcam';
+import { CustomCameraComponent } from './components/custom-camera/custom-camera.component';
 
 
 @NgModule({
@@ -52,7 +55,9 @@ import { ScopeOfWorkComponent } from './pages/job-management/scope-of-work/scope
     JobArrivalComponent,
     JobListComponent,
     CriticalAssetComponent,
-    ScopeOfWorkComponent
+    ScopeOfWorkComponent,
+    PulleyArrivalComponent,
+    CustomCameraComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +88,8 @@ import { ScopeOfWorkComponent } from './pages/job-management/scope-of-work/scope
     MatTableModule,
     MatTabsModule,
     HttpClientModule,
-    MatStepperModule
+    MatStepperModule,
+    WebcamModule
     // FlexModule,
     // FlexLayoutModule
 

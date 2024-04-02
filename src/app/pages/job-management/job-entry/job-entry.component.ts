@@ -14,7 +14,8 @@ export class JobEntryComponent implements OnInit, AfterViewInit {
   @Input() jobItem: ProkJob = new ProkJob();
   isDeleting = false;
   // @Input() IjobItem?: JobArrivalObj;
-
+  customerDrawing : any = null;
+  customerPOFile: any = null;
   constructor(private webReq: WebRequestsService, private router: Router) { }
 
   ngAfterViewInit(): void {
@@ -67,6 +68,52 @@ export class JobEntryComponent implements OnInit, AfterViewInit {
     }, err => {
       console.warn(err)
     })
+  }
+
+  onDragOver(event: any) {
+    event.preventDefault();
+    event.stopPropagation();
+    // Add styles to indicate drag over
+    event.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+  }
+
+  onDragEnter(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    // Add styles to indicate drag enter
+  }
+
+  onDragLeave(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    // Remove styles to indicate drag leave
+  }
+
+  onDrop(event: any, _type:any) {
+    event.preventDefault();
+    event.stopPropagation();
+    // Remove styles to indicate drop
+    const files = event.dataTransfer.files;
+    if (files.length > 0) {
+      this.handleFiles(files, _type == 'PO' ? 'PO' : 'DRAWING');
+    }
+  }
+
+  handleFiles(files: FileList, _type:any) {
+    // Handle the files here (e.g., upload to server, process locally)
+    console.log(files);
+    if(_type == 'PO'){
+      this.customerPOFile = files
+    } else {
+      this.customerDrawing = files
+    }
+  }
+
+  onSelectFiles(event: any, _type:any) {
+    const files = event.target.files;
+    if (files.length > 0) {
+      this.handleFiles(files, _type);
+    }
   }
 
 }

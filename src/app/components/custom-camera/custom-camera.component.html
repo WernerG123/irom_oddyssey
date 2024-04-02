@@ -1,0 +1,9 @@
+<div class="backdrop">
+    <div *ngIf="ratioSet" class="cameraContainer">
+        <webcam [height]="getHeight()" [width]="getWidth()" [trigger]="triggerObservable"
+            (imageCapture)="handleImageCapture($event)">
+            <!-- <webcam [height]="myHeight" [width]="myWidth" [trigger]="triggerObservable" (imageCapture)="handleImageCapture($event)"> -->
+        </webcam>
+        <button mat-mini-fab id="camButton" (click)="captureImage()"><mat-icon>camera</mat-icon></button>
+    </div>
+</div>

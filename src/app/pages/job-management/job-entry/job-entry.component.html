@@ -1,7 +1,7 @@
 <mat-card style="border: 1px solid black;">
-    <mat-stepper>
-        <mat-step>
-            <ng-template matStepLabel>Customer And Job Information</ng-template>
+    <!-- <mat-stepper> -->
+        <!-- <mat-step> -->
+            <!-- <ng-template matStepLabel>Customer And Job Information</ng-template> -->
             <mat-grid-list cols="5" rowHeight="2:3">
                 <mat-grid-tile >
                     <div style="display: flex; flex-direction: column; height: fit-content; max-height: 100%; overflow: auto;">
@@ -95,14 +95,36 @@
                 </mat-grid-tile>
         
                 <mat-grid-tile>
-                    <div class="customerPOContainer">Add Customer PO Here</div>
+                    <div class="customerPOContainer">
+                        Add Customer PO Here
+                        <div id="drop-area" (dragover)="onDragOver($event)" (dragenter)="onDragEnter($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event, 'PO')">
+                            <p>Drag & drop files here, or click to select files</p>
+                          </div>
+                        <div *ngIf="customerPOFile != null">
+                            <div *ngFor="let file of customerPOFile">
+                                {{file.name}}
+                            </div>
+                        </div>
+                    </div>
+                    
                 </mat-grid-tile>
                 <mat-grid-tile>
-                    <div class="drawingContainer">Add Drawing Here</div>
+                    <div class="drawingContainer">
+                        Add Drawing Here
+                        <div id="drop-area" (dragover)="onDragOver($event)" (dragenter)="onDragEnter($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event, 'DRAWING')">
+                            <p>Drag & drop files here, or click to select files</p>
+                          </div>
+                          <div *ngIf="customerDrawing != null">
+                            <div *ngFor="let file of customerDrawing">
+                                {{file.name}}
+                            </div>
+                        </div>
+                    </div>
+                    
                 </mat-grid-tile>
             </mat-grid-list>
-        </mat-step>
-        <mat-step>
+        <!-- </mat-step> -->
+        <!-- <mat-step>
             <ng-template matStepLabel>Pulley Arrival Condition</ng-template>
             <mat-grid-list cols="5" rowHeight="2:3">
                 <mat-grid-tile>
@@ -171,7 +193,6 @@
 
                         <mat-form-field appearance="outline">
                             <mat-label>Coupling</mat-label>
-                            <!-- <mat-select [(ngModel)]="jobItem.coupling.available"> -->
                                 <mat-select [(ngModel)]="jobItem.pulleyArrival!.coupling.available">
                                 <mat-option value="YES">YES</mat-option>
                                 <mat-option value="NO">NO</mat-option>
@@ -179,13 +200,11 @@
                         </mat-form-field>
                         <mat-form-field appearance="outline">
                             <mat-label>Coupling Comment</mat-label>
-                            <!-- <input matInput [(ngModel)]="jobItem.coupling.comment"> -->
                             <input matInput [(ngModel)]="jobItem.pulleyArrival!.coupling.comment">
                         </mat-form-field>
 
                         <mat-form-field appearance="outline">
                             <mat-label>Transport Cradle</mat-label>
-                            <!-- <mat-select [(ngModel)]="jobItem..transportCradle.available"> -->
                                 <mat-select [(ngModel)]="jobItem.pulleyArrival!.transportCradle.available">
                                 <mat-option value="YES">YES</mat-option>
                                 <mat-option value="NO">NO</mat-option>
@@ -218,8 +237,8 @@
                 </mat-grid-tile>
 
             </mat-grid-list>
-        </mat-step>
-    </mat-stepper>
+        </mat-step> -->
+    <!-- </mat-stepper> -->
 
     <button mat-raised-button color="primary" style="margin: 8px;" (click)="saveJobEntry()"><mat-icon>check</mat-icon> Submit</button>
     <button mat-raised-button color="accent" style="margin: 8px;" (click)="close()"><mat-icon>cancel</mat-icon> Close</button>
